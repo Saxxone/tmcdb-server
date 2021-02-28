@@ -11,7 +11,8 @@ import { InviteesModule } from './invitees/invitees.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
+      host:
+        'private-db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
       port: 25060,
       username: 'doadmin',
       password: 'lgu81sylka6q1zrh',
