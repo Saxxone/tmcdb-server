@@ -11,10 +11,10 @@ import { InviteesModule } from './invitees/invitees.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '3e63UUMGIuuJvKb9',
+      host: 'db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
+      port: 25060,
+      username: 'doadmin',
+      password: 'lgu81sylka6q1zrh',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
@@ -26,3 +26,8 @@ import { InviteesModule } from './invitees/invitees.module';
   providers: [AppService],
 })
 export class AppModule {}
+//globroot credentials
+//CREATE USER 'globroot'@'localhost' IDENTIFIED BY '3e#@63UUMGIuuJvKb9';
+
+
+
