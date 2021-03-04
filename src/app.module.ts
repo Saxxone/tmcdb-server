@@ -13,7 +13,8 @@ import { InviteesModule } from './invitees/invitees.module';
       type: 'mysql',
       host: 'localhost',
       // host: 'database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com', //for aws
-      port: 3306,
+      // port: 3306,
+      port: 25060, //for DO
       username: 'globroot', //for DO
       // username: 'admin', // for aws
       // password: '#KV9%e_VcaEfPjKy',// for aws
