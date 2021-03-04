@@ -14,9 +14,10 @@ import { InviteesModule } from './invitees/invitees.module';
       host: 'localhost',
       // host: 'database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com', //for aws
       port: 3306,
-      username: 'admin', //for localhost
+      username: 'globroot', //for DO
       // username: 'admin', // for aws
-      password: '#KV9%e_VcaEfPjKy',
+      // password: '#KV9%e_VcaEfPjKy',// for aws
+      password: '3e#@63UUMGIuuJvKb9',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
