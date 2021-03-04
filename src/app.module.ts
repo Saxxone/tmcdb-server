@@ -14,7 +14,7 @@ import { InviteesModule } from './invitees/invitees.module';
       host: 'localhost',
       // host: 'database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com', //for aws
       port: 3306,
-      username: 'root', //for localhost
+      username: 'admin', //for localhost
       // username: 'admin', // for aws
       password: '#KV9%e_VcaEfPjKy',
       database: 'tmcdb',
@@ -29,6 +29,7 @@ import { InviteesModule } from './invitees/invitees.module';
 })
 export class AppModule {}
 
-//PROMPT> mysql -h database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com -P 3306 -u admin -p #KV9%e_VcaEfPjKy
+
+//PROMPT> mysql -h database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com -P 3306 -u admin -p 3e63UUMGIuuJvKb9
 //globroot credentials for DO
 //CREATE USER 'globroot'@'localhost' IDENTIFIED BY '3e#@63UUMGIuuJvKb9';
