@@ -11,14 +11,15 @@ import { InviteesModule } from './invitees/invitees.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host:
+        'private-db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
       // host: 'database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com', //for aws
       // port: 3306,
       port: 25060, //for DO
-      username: 'globroot', //for DO
+      username: 'doadmin', //for DO
       // username: 'admin', // for aws
       // password: '#KV9%e_VcaEfPjKy',// for aws
-      password: '3e#@63UUMGIuuJvKb9',
+      password: 'lgu81sylka6q1zrh',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
