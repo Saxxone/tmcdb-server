@@ -22,28 +22,59 @@ export class UsersService {
     return this.userRepository.save(createUserDto);
   }
 
-  async findAll(page, size): Promise<User[]> {
-    return await this.userRepository.find({
-      take: size,
-      skip: size * page,
+  async findAll(query): Promise<any> {
+    const take = query.size;
+    const search = query.search;
+    const page = query.page;
+    const start = query.start;
+    const end = query.end;
+    if (search) {
+      const count = await this.userRepository.count({
+        where: [
+          { surname: Like(`%${search}%`) },
+          { otherNames: Like(`%${search}%`) },
+        ],
+        order: {
+          surname: 'ASC',
+        },
+      });
+      const all = await this.userRepository.find({
+        take: take,
+        skip: take * (page - 1),
+        where: [
+          { surname: Like(`%${search}%`) },
+          { otherNames: Like(`%${search}%`) },
+        ],
+      });
+      return { all: all, count: count };
+    } else if (start) {
+      const all = await this.userRepository.find({
+        take: take,
+        skip: take * (page - 1),
+        order: {
+          surname: 'ASC',
+        },
+        where: {
+          createdAt: Between(start, end),
+        },
+      });
+      const count = await this.userRepository.count({
+        where: {
+          createdAt: Between(start, end),
+        },
+      });
+      return { all: all, count: count };
+    }
+    const all = await this.userRepository.find({
+      take: take,
+      skip: take * (page - 1),
       order: {
         surname: 'ASC',
-        createdAt: 'ASC',
       },
     });
-  }
+    const count = await this.userRepository.count();
 
-  async findByDate(start, end) {
-    return await this.userRepository.find({
-      where: {
-        createdAt: Between(start, end),
-      },
-    });
-  }
-  async search(q) {
-    return await this.userRepository.find({
-      where: [{ surname: Like(`%${q}%`) }, { otherNames: Like(`%${q}%`) }],
-    });
+    return { all: all, count: count };
   }
 
   async findOne(id: string): Promise<User> {

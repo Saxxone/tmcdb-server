@@ -25,17 +25,8 @@ export class UsersController {
   }
 
   @Get()
-  findAll(@Query('page') page, @Query('size') size): Promise<User[]> {
-    return this.usersService.findAll(page, size);
-  }
-
-  @Get('/search')
-  search(@Query('q') q): Promise<User[]> {
-    return this.usersService.search(q);
-  }
-  @Get('/find')
-  findByDate(@Query('start') start, @Query('end') end): Promise<User[]> {
-    return this.usersService.findByDate(start, end);
+  findAll(@Query() query): any {
+    return this.usersService.findAll(query);
   }
 
   @Get(':id')
