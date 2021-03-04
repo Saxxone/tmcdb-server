@@ -11,7 +11,8 @@ import { InviteesModule } from './invitees/invitees.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      // host: 'localhost',
+      host: 'database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com', //for aws
       port: 3306,
       // username: 'root', //for localhost
       username: 'admin', // for aws
@@ -27,8 +28,6 @@ import { InviteesModule } from './invitees/invitees.module';
   providers: [AppService],
 })
 export class AppModule {}
-//globroot credentials
+//PROMPT> mysql -h <endpoint> -P 3306 -u <admin> -p 3e63UUMGIuuJvKb9
+//globroot credentials for DO
 //CREATE USER 'globroot'@'localhost' IDENTIFIED BY '3e#@63UUMGIuuJvKb9';
-
-
-
