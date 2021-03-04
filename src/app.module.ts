@@ -13,7 +13,8 @@ import { InviteesModule } from './invitees/invitees.module';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: 'root',
+      // username: 'root', //for localhost
+      username: 'admin', // for aws
       password: '3e63UUMGIuuJvKb9',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
