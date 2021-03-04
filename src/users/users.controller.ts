@@ -1,4 +1,14 @@
-import { Controller, Get, Post, Body, Put, Param, Delete, Req, Query } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Put,
+  Param,
+  Delete,
+  Req,
+  Query,
+} from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -15,13 +25,16 @@ export class UsersController {
   }
 
   @Get()
-  findAll(): Promise<User[]> {
-    return this.usersService.findAll();
+  findAll(@Query('page') page, @Query('size') size): Promise<User[]> {
+    return this.usersService.findAll(page, size);
   }
 
+  @Get('/search')
+  search(@Query('q') q): Promise<User[]> {
+    return this.usersService.search(q);
+  }
   @Get('/find')
   findByDate(@Query('start') start, @Query('end') end): Promise<User[]> {
-    console.log(start, end);
     return this.usersService.findByDate(start, end);
   }
 
@@ -31,7 +44,10 @@ export class UsersController {
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto): Promise<UpdateResult> {
+  update(
+    @Param('id') id: string,
+    @Body() updateUserDto: UpdateUserDto,
+  ): Promise<UpdateResult> {
     return this.usersService.update(+id, updateUserDto);
   }
 

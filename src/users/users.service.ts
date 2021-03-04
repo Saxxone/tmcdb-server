@@ -4,6 +4,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import {
   Between,
+  Like,
   MoreThanOrEqual,
   Raw,
   Repository,
@@ -21,13 +22,13 @@ export class UsersService {
     return this.userRepository.save(createUserDto);
   }
 
-  async findAll(): Promise<User[]> {
+  async findAll(page, size): Promise<User[]> {
     return await this.userRepository.find({
-      take: 50,
-      skip: 0,
+      take: size,
+      skip: size * page,
       order: {
-        createdAt: 'ASC',
         surname: 'ASC',
+        createdAt: 'ASC',
       },
     });
   }
@@ -37,6 +38,11 @@ export class UsersService {
       where: {
         createdAt: Between(start, end),
       },
+    });
+  }
+  async search(q) {
+    return await this.userRepository.find({
+      where: [{ surname: Like(`%${q}%`) }, { otherNames: Like(`%${q}%`) }],
     });
   }
 
