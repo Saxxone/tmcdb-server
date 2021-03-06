@@ -29,5 +29,9 @@ export class AppModule {}
 
 
 //PROMPT> mysql -h database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com -P 3306 -u admin -p 3e63UUMGIuuJvKb9
-//globroot credentials for DO
-//CREATE USER 'globroot'@'localhost' IDENTIFIED BY '3e#@63UUMGIuuJvKb9';
+// DO credentials
+// host: 'db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
+//   port: 25060,
+//   username: 'doadmin',
+//   password: 'lgu81sylka6q1zrh',
+  // database: 'tmcdb',

@@ -2,14 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import {
-  Between,
-  Like,
-  MoreThanOrEqual,
-  Raw,
-  Repository,
-  UpdateResult,
-} from 'typeorm';
+import { Between, Like, Repository, UpdateResult } from 'typeorm';
 import { User } from './entities/user.entity';
 
 @Injectable()
@@ -82,13 +75,14 @@ export class UsersService {
   }
 
   async update(
-    id: number,
+    id: string,
     updateUserDto: UpdateUserDto,
   ): Promise<UpdateResult> {
+    console.log(id, updateUserDto);
     return await this.userRepository.update(id, updateUserDto);
   }
 
-  async remove(id: number): Promise<UpdateResult> {
+  async remove(id: string): Promise<UpdateResult> {
     return await this.userRepository.softDelete(id);
   }
 }
