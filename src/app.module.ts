@@ -5,6 +5,10 @@ import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CommentsModule } from './comments/comments.module';
 import { InviteesModule } from './invitees/invitees.module';
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
+import { DepartmentsModule } from './departments/departments.module';
+import { FamiliesModule } from './families/families.module';
 
 @Module({
   imports: [
@@ -21,6 +25,10 @@ import { InviteesModule } from './invitees/invitees.module';
     }),
     CommentsModule,
     InviteesModule,
+    AdminModule,
+    AuthModule,
+    DepartmentsModule,
+    FamiliesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
