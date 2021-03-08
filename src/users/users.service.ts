@@ -23,6 +23,7 @@ export class UsersService {
     const end = query.end;
     if (search) {
       const count = await this.userRepository.count({
+        relations: ['comments'],
         where: [
           { surname: Like(`%${search}%`) },
           { otherNames: Like(`%${search}%`) },
@@ -48,6 +49,7 @@ export class UsersService {
       return { all: all, count: count };
     } else if (start) {
       const all = await this.userRepository.find({
+        relations: ['comments'],
         take: take,
         skip: take * (page - 1),
         order: {
@@ -65,6 +67,7 @@ export class UsersService {
       return { all: all, count: count };
     }
     const all = await this.userRepository.find({
+      relations: ['comments'],
       take: take,
       skip: take * (page - 1),
       order: {
