@@ -6,7 +6,7 @@ import {
   DeleteDateColumn,
   UpdateDateColumn,
   CreateDateColumn,
-  OneToMany,
+  OneToMany, Index,
 } from 'typeorm';
 import { Comment } from '../../comments/entities/comment.entity';
 
@@ -21,9 +21,11 @@ export class User extends BaseEntity {
   @Column()
   title: string;
 
+  @Index({ fulltext: true })
   @Column()
   surname: string;
 
+  @Index({ fulltext: true })
   @Column()
   otherNames: string;
 

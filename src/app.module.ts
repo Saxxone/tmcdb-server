@@ -15,10 +15,10 @@ import { FamiliesModule } from './families/families.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
-      port: 25060,
-      username: 'doadmin',
-      password: 'lgu81sylka6q1zrh',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: '3e63UUMGIuuJvKb9',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
@@ -36,6 +36,7 @@ import { FamiliesModule } from './families/families.module';
 export class AppModule {}
 
 //PROMPT> mysql -h database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com -P 3306 -u admin -p 3e63UUMGIuuJvKb9
+// PROMPT> mysql -h database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com -P 3306 -u admin -p 3e63UUMGIuuJvKb9
 // DO credentials
 // host: 'db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
 //   port: 25060,

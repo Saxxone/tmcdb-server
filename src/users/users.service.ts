@@ -35,8 +35,14 @@ export class UsersService {
         take: take,
         skip: take * (page - 1),
         where: [
+          // { surname: Like(`%${search} %`), otherNames: Like(`%${search} %`) },
+          // { otherNames: Like(`%${search} %`), surname: Like(`%${search} %`) },
           { surname: Like(`%${search}%`) },
           { otherNames: Like(`%${search}%`) },
+          { title: Like(`%${search}%`) },
+          { address: Like(`%${search}%`) },
+          { status: Like(`%${search}%`) },
+          { gender: Like(`%${search}%`) },
         ],
       });
       return { all: all, count: count };
@@ -86,3 +92,6 @@ export class UsersService {
     return await this.userRepository.softDelete(id);
   }
 }
+
+
+// SELECT * FROM user WHERE MATCH (surname,otherNames) AGAINST ('Achodike akachi' IN NATURAL LANGUAGE MODE)\G
