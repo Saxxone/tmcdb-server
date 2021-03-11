@@ -26,6 +26,9 @@ export class UsersService {
         where: [
           { surname: Like(`%${search}%`) },
           { otherNames: Like(`%${search}%`) },
+          { title: Like(`%${search}%`) },
+          { status: Like(`%${search}%`) },
+          { gender: Like(`%${search}%`) },
         ],
         order: {
           surname: 'ASC',
@@ -41,7 +44,6 @@ export class UsersService {
           { surname: Like(`%${search}%`) },
           { otherNames: Like(`%${search}%`) },
           { title: Like(`%${search}%`) },
-          { address: Like(`%${search}%`) },
           { status: Like(`%${search}%`) },
           { gender: Like(`%${search}%`) },
         ],
