@@ -38,6 +38,9 @@ export class UsersService {
         relations: ['comments'],
         take: take,
         skip: take * (page - 1),
+        order: {
+          createdAt: 'ASC',
+        },
         where: [
           // { surname: Like(`%${search} %`), otherNames: Like(`%${search} %`) },
           // { otherNames: Like(`%${search} %`), surname: Like(`%${search} %`) },
@@ -55,6 +58,7 @@ export class UsersService {
         take: take,
         skip: take * (page - 1),
         order: {
+          createdAt: 'ASC',
           surname: 'ASC',
         },
         where: {

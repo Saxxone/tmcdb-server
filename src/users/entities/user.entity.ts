@@ -6,9 +6,15 @@ import {
   DeleteDateColumn,
   UpdateDateColumn,
   CreateDateColumn,
-  OneToMany, Index,
+  OneToMany,
+  Index,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
 } from 'typeorm';
 import { Comment } from '../../comments/entities/comment.entity';
+import { Department } from '../../departments/entities/department.entity';
+import { Family } from '../../families/entities/family.entity';
 
 @Entity()
 export class User extends BaseEntity {
@@ -41,11 +47,12 @@ export class User extends BaseEntity {
   @Column()
   age: string;
 
-  @Column()
-  departments: string;
+  // @ManyToMany(() => Department)
+  // @JoinTable()
+  // departments: Department[];
 
-  @Column()
-  mafaFamily: string;
+  // @ManyToOne(() => Family, (family) => family.members)
+  // family: Family;
 
   @Column()
   address: string;
