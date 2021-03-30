@@ -15,9 +15,9 @@ import { FamiliesModule } from './families/families.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
-      port: 25060,
-      username: 'doadmin',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
       password: 'lgu81sylka6q1zrh',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
