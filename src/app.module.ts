@@ -17,7 +17,7 @@ import { FamiliesModule } from './families/families.module';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: 'root',
+      username: 'admin',
       password: 'lgu81sylka6q1zrh',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
