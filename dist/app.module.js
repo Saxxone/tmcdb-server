@@ -29,7 +29,7 @@ AppModule = __decorate([
                 host: 'localhost',
                 port: 3306,
                 username: 'admin',
-                password: 'lgu81sylka6q1zrh',
+                password: '3e63UUMGIuuJvKb9',
                 database: 'tmcdb',
                 entities: ['dist/**/*.entity{.ts,.js}'],
                 synchronize: true,

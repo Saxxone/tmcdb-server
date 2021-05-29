@@ -18,7 +18,7 @@ import { FamiliesModule } from './families/families.module';
       host: 'localhost',
       port: 3306,
       username: 'admin',
-      password: 'lgu81sylka6q1zrh',
+      password: '3e63UUMGIuuJvKb9',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
@@ -35,14 +35,12 @@ import { FamiliesModule } from './families/families.module';
 })
 export class AppModule {}
 
-//PROMPT> mysql -h database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com -P 3306 -u admin -p 3e63UUMGIuuJvKb9
-// PROMPT> mysql -h database-2.cg3cfi29nmy8.us-east-2.rds.amazonaws.com -P 3306 -u admin -p 3e63UUMGIuuJvKb9
-// DO credentials
-// host: 'db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com',
-//   port: 25060,
-//   username: 'doadmin',
-//   password: 'lgu81sylka6q1zrh',
-// database: 'tmcdb',
-// mysql -u doadmin -p
+// CREATE USER 'root'@'ec2-3-19-211-136.us-east-2.compute.amazonaws.com' IDENTIFIED BY '3e63UUMGIuuJvKb9';
 
-// mysql -h db-mysql-nyc3-15962-do-user-8796872-0.b.db.ondigitalocean.com -P 25060 -u admin -p 3e63UUMGIuuJvKb9
+
+// GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD, REPLICATION CLIENT on *.* TO 'root'@'ec2-3-19-211-136.us-east-2.compute.amazonaws.com' WITH GRANT OPTION;
+
+// CREATE USER 'admin'@'localhost' IDENTIFIED BY '3e63UUMGIuuJvKb9';
+
+//GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+

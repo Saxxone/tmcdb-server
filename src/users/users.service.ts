@@ -47,6 +47,7 @@ export class UsersService {
           { surname: Like(`%${search}%`) },
           { otherNames: Like(`%${search}%`) },
           { title: Like(`%${search}%`) },
+          { address: Like(`%${search}%`) },
           { status: Like(`%${search}%`) },
           { gender: Like(`%${search}%`) },
         ],
