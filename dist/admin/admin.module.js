@@ -10,16 +10,24 @@ exports.AdminModule = void 0;
 const common_1 = require("@nestjs/common");
 const admin_service_1 = require("./admin.service");
 const typeorm_1 = require("@nestjs/typeorm");
+const jwt_1 = require("@nestjs/jwt");
 const admin_entity_1 = require("./entities/admin.entity");
 const admin_controller_1 = require("./admin.controller");
+const constants_1 = require("../auth/constants");
 let AdminModule = class AdminModule {
 };
 AdminModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forFeature([admin_entity_1.Admin])],
+        imports: [
+            typeorm_1.TypeOrmModule.forFeature([admin_entity_1.Admin]),
+            jwt_1.JwtModule.register({
+                secret: constants_1.jwtConstants.secret,
+                signOptions: { expiresIn: '2592000s' },
+            }),
+        ],
         controllers: [admin_controller_1.AdminController],
         providers: [admin_service_1.AdminService],
-        exports: [typeorm_1.TypeOrmModule, admin_service_1.AdminService],
+        exports: [typeorm_1.TypeOrmModule, admin_service_1.AdminService, jwt_1.JwtModule],
     })
 ], AdminModule);
 exports.AdminModule = AdminModule;

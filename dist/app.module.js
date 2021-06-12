@@ -28,7 +28,7 @@ AppModule = __decorate([
                 type: 'mysql',
                 host: 'localhost',
                 port: 3306,
-                username: 'admin',
+                username: 'root',
                 password: '3e63UUMGIuuJvKb9',
                 database: 'tmcdb',
                 entities: ['dist/**/*.entity{.ts,.js}'],

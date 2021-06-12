@@ -2,12 +2,14 @@ import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { JwtService } from '@nestjs/jwt';
 import { Admin } from './entities/admin.entity';
 import { CreateAdminDto } from './dto/create-admin.dto';
 
 @Injectable()
 export class AdminService {
   constructor(
+    private jwtService: JwtService,
     @InjectRepository(Admin) private adminRepository: Repository<Admin>,
   ) {}
 
@@ -18,10 +20,11 @@ export class AdminService {
     console.log(createAdminDto);
     return this.adminRepository.save(createAdminDto);
   }
-  async findOne(username: string): Promise<Admin | any> {
+  async findOne(token: string): Promise<Admin | any> {
+    const verifiedUser = this.jwtService.verify(token);
     return this.adminRepository.findOne({
       where: {
-        username: username,
+        username: verifiedUser.username,
       },
     });
   }

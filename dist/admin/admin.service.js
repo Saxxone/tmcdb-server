@@ -17,9 +17,11 @@ const common_1 = require("@nestjs/common");
 const bcrypt = require("bcrypt");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
+const jwt_1 = require("@nestjs/jwt");
 const admin_entity_1 = require("./entities/admin.entity");
 let AdminService = class AdminService {
-    constructor(adminRepository) {
+    constructor(jwtService, adminRepository) {
+        this.jwtService = jwtService;
         this.adminRepository = adminRepository;
     }
     async create(createAdminDto) {
@@ -29,18 +31,20 @@ let AdminService = class AdminService {
         console.log(createAdminDto);
         return this.adminRepository.save(createAdminDto);
     }
-    async findOne(username) {
+    async findOne(token) {
+        const verifiedUser = this.jwtService.verify(token);
         return this.adminRepository.findOne({
             where: {
-                username: username,
+                username: verifiedUser.username,
             },
         });
     }
 };
 AdminService = __decorate([
     common_1.Injectable(),
-    __param(0, typeorm_1.InjectRepository(admin_entity_1.Admin)),
-    __metadata("design:paramtypes", [typeorm_2.Repository])
+    __param(1, typeorm_1.InjectRepository(admin_entity_1.Admin)),
+    __metadata("design:paramtypes", [jwt_1.JwtService,
+        typeorm_2.Repository])
 ], AdminService);
 exports.AdminService = AdminService;
 //# sourceMappingURL=admin.service.js.map

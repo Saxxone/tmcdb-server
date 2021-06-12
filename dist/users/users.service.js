@@ -54,6 +54,7 @@ let UsersService = class UsersService {
                     { surname: typeorm_2.Like(`%${search}%`) },
                     { otherNames: typeorm_2.Like(`%${search}%`) },
                     { title: typeorm_2.Like(`%${search}%`) },
+                    { address: typeorm_2.Like(`%${search}%`) },
                     { status: typeorm_2.Like(`%${search}%`) },
                     { gender: typeorm_2.Like(`%${search}%`) },
                 ],
