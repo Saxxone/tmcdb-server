@@ -3237,12 +3237,12 @@
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
-        "version": "ba656a9400d9e6969f7c0469b58572001432dcb09fb3918678303e9be6901476",
+        "version": "be63075017784f35107a09b3f484b0d99a8dc9e1718b238b2f12682cf50e6f8e",
         "signature": "7607c5b8c7961f5fd908dc65cd055ecfc073951f7bc496fb2d124646b4d33d6f",
         "affectsGlobalScope": false
       },
       "../src/users/dto/create-user.dto.ts": {
-        "version": "8d79a4578405c22f3c6e3ad32d0c6242eed036bab134e8f0950d3c95781530e5",
+        "version": "2c2c73eaee3104ad795e2fd694db2431f7a4e3e2d6562ba51b6ac6975cdd832a",
         "signature": "c56496acf4ebe71dbf9b6d2f2df41edebf4405c63269c8b993c2adac494b7093",
         "affectsGlobalScope": false
       },
@@ -3312,7 +3312,7 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.service.ts": {
-        "version": "d66f87ec2e0c3d23940982a1bc75b82515dbfac625ff6f309a18432d8fba7d4c",
+        "version": "eeda0ff8b6dad673a2b7f70e236266c6b606ce55852429b28571f0e1768f3421",
         "signature": "419dc9467a9a7aa9c49ce3ddf6f4e3b4fc6adb25b7c967e185cf00a42f035363",
         "affectsGlobalScope": false
       },
@@ -3322,7 +3322,7 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.controller.ts": {
-        "version": "dac9e9e26af734ed502541e9392b31221714e0227e3eeb1db2af4206d7a2c648",
+        "version": "ae65d0e5b0c5d2f98b1c8fa0e3705aa1e61edfbef3a27bb4c8c0adb291d87122",
         "signature": "8e4f59a363a5aeae4bf35dc4b22c66a1b183cb9b32f9564200512544d98cdc55",
         "affectsGlobalScope": false
       },
@@ -3342,7 +3342,7 @@
         "affectsGlobalScope": false
       },
       "../src/comments/comments.service.ts": {
-        "version": "17c395181d78db6559d781a258d6499e7ced75c4a0004e80a5f5b93e584b00f3",
+        "version": "32ff5b9eed8aa1d7deb91b71eddeb85c855dfca6b27c5f2674c9b5b1f2f66d5d",
         "signature": "37c349f07e6f4c522e4643afc379ea712e27c3cab9807c095e27df906e2f010d",
         "affectsGlobalScope": false
       },
@@ -3481,8 +3481,38 @@
         "signature": "5f24964ea41b9da26e91be0c16ae6244447f8f8550318cb563a7da3434bc7d18",
         "affectsGlobalScope": false
       },
+      "../src/tithe/dto/create-tithe.dto.ts": {
+        "version": "7742eb43542f3909aeb86440ab3d00154d145f220dea3e84f4f1c0c47849f7f2",
+        "signature": "d80ab5d4cc0864b00e1762e4a93452454303ae60b44e48d98e42acd1869830ac",
+        "affectsGlobalScope": false
+      },
+      "../src/tithe/dto/update-tithe.dto.ts": {
+        "version": "796a9239ffe32bff2c54296cc4c91841003b5ff80b9be649d91cc0a7ac0037ae",
+        "signature": "1d6edd067f21bcacaf63bae51bf775ad5115d62b23acc9fc7bc30d007a7a0d33",
+        "affectsGlobalScope": false
+      },
+      "../src/tithe/entities/tithe.entity.ts": {
+        "version": "22d02aac19eac6488dd7bb657eaace0cc10dba4b5dae026f4ac3b71ca13e66f4",
+        "signature": "831ec9231c3e0a9ef53494f01d15cbc2e3f1583cebd30b2b27a46adb5cf1ea11",
+        "affectsGlobalScope": false
+      },
+      "../src/tithe/tithe.service.ts": {
+        "version": "53d6895acd8271e215d90fd58e62f3ce219e7afb721861b245c75269b41adc74",
+        "signature": "eac8cbf693046ba74c157809dc138992c4a0a0b4d938baaaf698bf070c573298",
+        "affectsGlobalScope": false
+      },
+      "../src/tithe/tithe.controller.ts": {
+        "version": "9f670418d9d08c18ba0eb5b25ca57756883bae2e5b54b0944c4b6fca1c030224",
+        "signature": "9f3811e91ecae1e979db97d6744b331622ddad46197f93cfb2e4a8851c2bb34a",
+        "affectsGlobalScope": false
+      },
+      "../src/tithe/tithe.module.ts": {
+        "version": "058827c6085909c33ac91fc5d54ba8e6989c75a1798c9d6b75dac3df34e5c6d9",
+        "signature": "e238c5e1055c68fad6f78c69fc405092c460baa1527c6acc3e0e612c85830d16",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "d8066fd9991a6ad3c48a20901a8cd33017ca2df862deae419dcfd1554dd3bebd",
+        "version": "949b04ae55a144089f487ba1a37c7fa3023c9cb560aa99fc2de8522444f66def",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -3852,7 +3882,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "72b2f7eb1a060da1c3da3ad58fdd52550f119e518709d863d8489b953d97cf2e",
+        "version": "8ec9d35916637d30787257019ea3c744e14019ae3c2beb9506d81e0052ba8ea2",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
@@ -7013,6 +7043,7 @@
         "../src/departments/departments.module.ts",
         "../src/families/families.module.ts",
         "../src/invitees/invitees.module.ts",
+        "../src/tithe/tithe.module.ts",
         "../src/users/users.module.ts"
       ],
       "../src/app.service.ts": [
@@ -7156,6 +7187,34 @@
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/app.module.ts"
+      ],
+      "../src/tithe/dto/update-tithe.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/tithe/dto/create-tithe.dto.ts"
+      ],
+      "../src/tithe/entities/tithe.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/tithe/tithe.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/tithe/dto/create-tithe.dto.ts",
+        "../src/tithe/dto/update-tithe.dto.ts",
+        "../src/tithe/tithe.service.ts"
+      ],
+      "../src/tithe/tithe.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/tithe/entities/tithe.entity.ts",
+        "../src/tithe/tithe.controller.ts",
+        "../src/tithe/tithe.service.ts"
+      ],
+      "../src/tithe/tithe.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/tithe/dto/create-tithe.dto.ts",
+        "../src/tithe/dto/update-tithe.dto.ts",
+        "../src/tithe/entities/tithe.entity.ts"
       ],
       "../src/users/dto/update-user.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
@@ -10115,6 +10174,25 @@
         "../src/invitees/dto/create-invitee.dto.ts",
         "../src/invitees/dto/update-invitee.dto.ts"
       ],
+      "../src/tithe/dto/update-tithe.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/tithe/dto/create-tithe.dto.ts"
+      ],
+      "../src/tithe/entities/tithe.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/tithe/tithe.controller.ts": [
+        "../src/tithe/dto/create-tithe.dto.ts",
+        "../src/tithe/dto/update-tithe.dto.ts",
+        "../src/tithe/entities/tithe.entity.ts",
+        "../src/tithe/tithe.service.ts"
+      ],
+      "../src/tithe/tithe.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/tithe/dto/create-tithe.dto.ts",
+        "../src/tithe/dto/update-tithe.dto.ts",
+        "../src/tithe/entities/tithe.entity.ts"
+      ],
       "../src/users/dto/update-user.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
         "../src/users/dto/create-user.dto.ts"
@@ -10958,6 +11036,12 @@
       "../src/invitees/invitees.module.ts",
       "../src/invitees/invitees.service.ts",
       "../src/main.ts",
+      "../src/tithe/dto/create-tithe.dto.ts",
+      "../src/tithe/dto/update-tithe.dto.ts",
+      "../src/tithe/entities/tithe.entity.ts",
+      "../src/tithe/tithe.controller.ts",
+      "../src/tithe/tithe.module.ts",
+      "../src/tithe/tithe.service.ts",
       "../src/users/dto/create-user.dto.ts",
       "../src/users/dto/update-user.dto.ts",
       "../src/users/entities/user.entity.ts",

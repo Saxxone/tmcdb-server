@@ -22,7 +22,7 @@ let UsersService = class UsersService {
         this.userRepository = userRepository;
     }
     async create(createUserDto) {
-        return this.userRepository.save(createUserDto);
+        return await this.userRepository.save(createUserDto);
     }
     async findAll(query) {
         const take = query.size;
@@ -33,6 +33,7 @@ let UsersService = class UsersService {
         if (search) {
             const count = await this.userRepository.count({
                 where: [
+                    { phoneNumber: typeorm_2.Like(`%${search}%`) },
                     { surname: typeorm_2.Like(`%${search}%`) },
                     { otherNames: typeorm_2.Like(`%${search}%`) },
                     { title: typeorm_2.Like(`%${search}%`) },
@@ -52,6 +53,7 @@ let UsersService = class UsersService {
                 },
                 where: [
                     { surname: typeorm_2.Like(`%${search}%`) },
+                    { phoneNumber: typeorm_2.Like(`%${search}%`) },
                     { otherNames: typeorm_2.Like(`%${search}%`) },
                     { title: typeorm_2.Like(`%${search}%`) },
                     { address: typeorm_2.Like(`%${search}%`) },

@@ -9,6 +9,7 @@ import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { FamiliesModule } from './families/families.module';
+import { TitheModule } from './tithe/tithe.module';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { FamiliesModule } from './families/families.module';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: 'root',
+      username: 'admin',
       password: '3e63UUMGIuuJvKb9',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
@@ -29,6 +30,7 @@ import { FamiliesModule } from './families/families.module';
     AuthModule,
     DepartmentsModule,
     FamiliesModule,
+    TitheModule,
   ],
   controllers: [AppController],
   providers: [AppService],

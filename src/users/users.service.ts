@@ -12,7 +12,7 @@ export class UsersService {
   ) {}
 
   async create(createUserDto: CreateUserDto): Promise<User> {
-    return this.userRepository.save(createUserDto);
+    return await this.userRepository.save(createUserDto);
   }
 
   async findAll(query): Promise<any> {
@@ -24,6 +24,7 @@ export class UsersService {
     if (search) {
       const count = await this.userRepository.count({
         where: [
+          { phoneNumber: Like(`%${search}%`) },
           { surname: Like(`%${search}%`) },
           { otherNames: Like(`%${search}%`) },
           { title: Like(`%${search}%`) },
@@ -45,6 +46,7 @@ export class UsersService {
           // { surname: Like(`%${search} %`), otherNames: Like(`%${search} %`) },
           // { otherNames: Like(`%${search} %`), surname: Like(`%${search} %`) },
           { surname: Like(`%${search}%`) },
+          { phoneNumber: Like(`%${search}%`) },
           { otherNames: Like(`%${search}%`) },
           { title: Like(`%${search}%`) },
           { address: Like(`%${search}%`) },
@@ -102,6 +104,5 @@ export class UsersService {
     return await this.userRepository.softDelete(id);
   }
 }
-
 
 // SELECT * FROM user WHERE MATCH (surname,otherNames) AGAINST ('Achodike akachi' IN NATURAL LANGUAGE MODE)\G
