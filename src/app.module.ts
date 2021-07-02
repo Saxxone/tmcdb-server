@@ -16,9 +16,9 @@ import { TitheModule } from './tithe/tithe.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'ec2-3-19-211-136.us-east-2.compute.amazonaws.com',
       port: 3306,
-      username: 'admin',
+      username: 'root',
       password: '3e63UUMGIuuJvKb9',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],

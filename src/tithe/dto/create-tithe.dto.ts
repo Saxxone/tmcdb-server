@@ -7,6 +7,8 @@ export class CreateTitheDto {
 
   bank: string;
 
+  amountPaid: string;
+
   purpose?: string;
 
   phone?: string;

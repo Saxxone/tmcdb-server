@@ -26,6 +26,9 @@ export class Tithe extends BaseEntity {
   category: string;
 
   @Column()
+  amountPaid: string;
+
+  @Column()
   bank: string;
 
   @Column()
