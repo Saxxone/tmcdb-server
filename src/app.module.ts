@@ -10,15 +10,16 @@ import { AuthModule } from './auth/auth.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { FamiliesModule } from './families/families.module';
 import { TitheModule } from './tithe/tithe.module';
+import { FellowshipModule } from './fellowship/fellowship.module';
 
 @Module({
   imports: [
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'ec2-3-19-211-136.us-east-2.compute.amazonaws.com',
+      host: 'localhost',
       port: 3306,
-      username: 'root',
+      username: 'admin',
       password: '3e63UUMGIuuJvKb9',
       database: 'tmcdb',
       entities: ['dist/**/*.entity{.ts,.js}'],
@@ -31,6 +32,7 @@ import { TitheModule } from './tithe/tithe.module';
     DepartmentsModule,
     FamiliesModule,
     TitheModule,
+    FellowshipModule,
   ],
   controllers: [AppController],
   providers: [AppService],

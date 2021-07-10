@@ -3482,8 +3482,8 @@
         "affectsGlobalScope": false
       },
       "../src/tithe/dto/create-tithe.dto.ts": {
-        "version": "7742eb43542f3909aeb86440ab3d00154d145f220dea3e84f4f1c0c47849f7f2",
-        "signature": "d80ab5d4cc0864b00e1762e4a93452454303ae60b44e48d98e42acd1869830ac",
+        "version": "7885c03404deecf50de05577b1bfc0f73f2f65a6b32b21dd6e757d273dedf04a",
+        "signature": "f8b2e8fa755abdcc9bff7ad2f49f0c0c2cde3bc22fa95dca53bc673d8af822cd",
         "affectsGlobalScope": false
       },
       "../src/tithe/dto/update-tithe.dto.ts": {
@@ -3492,8 +3492,8 @@
         "affectsGlobalScope": false
       },
       "../src/tithe/entities/tithe.entity.ts": {
-        "version": "22d02aac19eac6488dd7bb657eaace0cc10dba4b5dae026f4ac3b71ca13e66f4",
-        "signature": "831ec9231c3e0a9ef53494f01d15cbc2e3f1583cebd30b2b27a46adb5cf1ea11",
+        "version": "04fc13f9621ffdf85e17db2e193a7b9c75cd3b46ad09155e55c36b723064dc05",
+        "signature": "97832125a22852bda63b62cf86aa0e4b066b1028e33d9a4bda043192b191a64f",
         "affectsGlobalScope": false
       },
       "../src/tithe/tithe.service.ts": {
