@@ -3532,8 +3532,8 @@
         "affectsGlobalScope": false
       },
       "../src/homecell/homecell.controller.ts": {
-        "version": "368b13f68ada0c0c38ed9f15b55c2f60a49830658a620b74d1d9600250c3d0ae",
-        "signature": "eb83332124fc0b0dc4f08bcf00c4577adfc72d315a23c384967ccd7cc3faa84b",
+        "version": "d7a4799ca19e6aff722df5ee37e41c74b9b1ccb11733c1461662835bc163c165",
+        "signature": "094f8b28bd6377393c5043ff1afb60f2b2c6b0872d2907b5d8999f18cf9abe14",
         "affectsGlobalScope": false
       },
       "../src/homecell/homecell.module.ts": {
@@ -3542,7 +3542,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "9294104f01b2e1e037375662afc792e37d469e5c3c702ee76967a4fedac53e69",
+        "version": "4cae376605133028df38753efd83c36fe4a0d847eaa97dad54fa76e31afbef78",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -7205,6 +7205,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/homecell/dto/create-homecell.dto.ts",
         "../src/homecell/dto/update-homecell.dto.ts",
+        "../src/homecell/entities/homecell.entity.ts",
         "../src/homecell/homecell.service.ts"
       ],
       "../src/homecell/homecell.module.ts": [

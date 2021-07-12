@@ -2,18 +2,19 @@ import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common'
 import { HomecellService } from './homecell.service';
 import { CreateHomecellDto } from './dto/create-homecell.dto';
 import { UpdateHomecellDto } from './dto/update-homecell.dto';
+import { Homecell } from './entities/homecell.entity';
 
 @Controller('homecell')
 export class HomecellController {
   constructor(private readonly homecellService: HomecellService) {}
 
   @Post()
-  create(@Body() createHomecellDto: CreateHomecellDto) {
+  create(@Body() createHomecellDto: CreateHomecellDto): Promise<CreateHomecellDto> {
     return this.homecellService.create(createHomecellDto);
   }
 
   @Get()
-  findAll() {
+  findAll(): Promise<Homecell[]> {
     return this.homecellService.findAll();
   }
 
