@@ -1,4 +1,4 @@
-export class CreateFellowshipDto {
+export class CreateHomecellDto {
     id?: string;
 
   title?: string;
@@ -24,5 +24,4 @@ export class CreateFellowshipDto {
   email?: string;
 
   isActive?: boolean;
-
 }

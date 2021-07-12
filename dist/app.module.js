@@ -19,6 +19,7 @@ const auth_module_1 = require("./auth/auth.module");
 const departments_module_1 = require("./departments/departments.module");
 const families_module_1 = require("./families/families.module");
 const tithe_module_1 = require("./tithe/tithe.module");
+const homecell_module_1 = require("./homecell/homecell.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -29,7 +30,7 @@ AppModule = __decorate([
                 type: 'mysql',
                 host: 'localhost',
                 port: 3306,
-                username: 'admin',
+                username: 'root',
                 password: '3e63UUMGIuuJvKb9',
                 database: 'tmcdb',
                 entities: ['dist/**/*.entity{.ts,.js}'],
@@ -42,6 +43,7 @@ AppModule = __decorate([
             departments_module_1.DepartmentsModule,
             families_module_1.FamiliesModule,
             tithe_module_1.TitheModule,
+            homecell_module_1.HomecellModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

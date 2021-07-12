@@ -3511,8 +3511,38 @@
         "signature": "e238c5e1055c68fad6f78c69fc405092c460baa1527c6acc3e0e612c85830d16",
         "affectsGlobalScope": false
       },
+      "../src/homecell/dto/create-homecell.dto.ts": {
+        "version": "00d44d17604e06930272153a4756fa0aba3f917c048d9fc8d45f665870220d83",
+        "signature": "7f269788be3641b2e9ee5846aeede6bfff1848344169175b0ff3729e80741358",
+        "affectsGlobalScope": false
+      },
+      "../src/homecell/dto/update-homecell.dto.ts": {
+        "version": "be52939bb9c3bfe2e2ffd57caed22de0df992bb4ce2153df88413f5dbbae738e",
+        "signature": "ca592a5454645ac807e6c06ccc29d70a17b824789dd59a7e32033bf967c5114b",
+        "affectsGlobalScope": false
+      },
+      "../src/homecell/entities/homecell.entity.ts": {
+        "version": "978d9f597bd2eab85103f3e0044f2aeb2c906b9d099f1d2f47d53aef0ed0cb02",
+        "signature": "da9b818b25fd4ac6314bdad9a96c9fe8d34c5dbe138558d931293efc2ec1d72e",
+        "affectsGlobalScope": false
+      },
+      "../src/homecell/homecell.service.ts": {
+        "version": "568665d48326067adb38c604e48216aee8f6379bf6dbace80a809940fdc1762c",
+        "signature": "ac4064c026eb9eea3bd3179bbc030bb1e4f8d1bbaed1d37d042ac05d6b93e93b",
+        "affectsGlobalScope": false
+      },
+      "../src/homecell/homecell.controller.ts": {
+        "version": "368b13f68ada0c0c38ed9f15b55c2f60a49830658a620b74d1d9600250c3d0ae",
+        "signature": "eb83332124fc0b0dc4f08bcf00c4577adfc72d315a23c384967ccd7cc3faa84b",
+        "affectsGlobalScope": false
+      },
+      "../src/homecell/homecell.module.ts": {
+        "version": "f29f35d723f09376f3d547818aacf70482abb5d38ff62c9b8897b299caafc3da",
+        "signature": "c9d0f7355a2685d69de7cba66a7739b6daad1e6854c1948a369ab3686631ebea",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "949b04ae55a144089f487ba1a37c7fa3023c9cb560aa99fc2de8522444f66def",
+        "version": "9294104f01b2e1e037375662afc792e37d469e5c3c702ee76967a4fedac53e69",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -7042,6 +7072,7 @@
         "../src/comments/comments.module.ts",
         "../src/departments/departments.module.ts",
         "../src/families/families.module.ts",
+        "../src/homecell/homecell.module.ts",
         "../src/invitees/invitees.module.ts",
         "../src/tithe/tithe.module.ts",
         "../src/users/users.module.ts"
@@ -7162,6 +7193,34 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/families/dto/create-family.dto.ts",
         "../src/families/dto/update-family.dto.ts"
+      ],
+      "../src/homecell/dto/update-homecell.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/homecell/dto/create-homecell.dto.ts"
+      ],
+      "../src/homecell/entities/homecell.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/homecell/homecell.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/homecell/dto/create-homecell.dto.ts",
+        "../src/homecell/dto/update-homecell.dto.ts",
+        "../src/homecell/homecell.service.ts"
+      ],
+      "../src/homecell/homecell.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/homecell/entities/homecell.entity.ts",
+        "../src/homecell/homecell.controller.ts",
+        "../src/homecell/homecell.service.ts"
+      ],
+      "../src/homecell/homecell.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/homecell/dto/create-homecell.dto.ts",
+        "../src/homecell/dto/update-homecell.dto.ts",
+        "../src/homecell/entities/homecell.entity.ts"
       ],
       "../src/invitees/dto/update-invitee.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
@@ -10161,6 +10220,25 @@
         "../src/families/dto/create-family.dto.ts",
         "../src/families/dto/update-family.dto.ts"
       ],
+      "../src/homecell/dto/update-homecell.dto.ts": [
+        "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../src/homecell/dto/create-homecell.dto.ts"
+      ],
+      "../src/homecell/entities/homecell.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/homecell/homecell.controller.ts": [
+        "../src/homecell/dto/create-homecell.dto.ts",
+        "../src/homecell/dto/update-homecell.dto.ts",
+        "../src/homecell/entities/homecell.entity.ts",
+        "../src/homecell/homecell.service.ts"
+      ],
+      "../src/homecell/homecell.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/homecell/dto/create-homecell.dto.ts",
+        "../src/homecell/dto/update-homecell.dto.ts",
+        "../src/homecell/entities/homecell.entity.ts"
+      ],
       "../src/invitees/dto/update-invitee.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
         "../src/invitees/dto/create-invitee.dto.ts"
@@ -11029,6 +11107,12 @@
       "../src/families/families.controller.ts",
       "../src/families/families.module.ts",
       "../src/families/families.service.ts",
+      "../src/homecell/dto/create-homecell.dto.ts",
+      "../src/homecell/dto/update-homecell.dto.ts",
+      "../src/homecell/entities/homecell.entity.ts",
+      "../src/homecell/homecell.controller.ts",
+      "../src/homecell/homecell.module.ts",
+      "../src/homecell/homecell.service.ts",
       "../src/invitees/dto/create-invitee.dto.ts",
       "../src/invitees/dto/update-invitee.dto.ts",
       "../src/invitees/entities/invitee.entity.ts",
