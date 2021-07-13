@@ -36,6 +36,7 @@ import { HomecellModule } from './homecell/homecell.module';
   ],
   controllers: [AppController],
   providers: [AppService],
+
 })
 export class AppModule {}
 
